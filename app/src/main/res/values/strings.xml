@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="main_btn">Press me</string>
+    <string name="main_str">Your name</string>
+    <string name="void_input">Please input your name!</string>
+</resources>
