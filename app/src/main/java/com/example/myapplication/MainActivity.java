@@ -17,21 +17,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Context context = getApplicationContext();
 
         Button main_btn = findViewById(R.id.main_btn);
 
-        main_btn.setOnClickListener(view -> showText(context));
+        main_btn.setOnClickListener(view -> showText());
     }
 
-    /***
-     *  Output text from EditText to logs and display Toast when button is clicked
-     */
-    private void showText(Context context) {
-        int duration = Toast.LENGTH_SHORT;
-
+    private void showText() {
+        Context context = getApplicationContext();
         EditText main_input = findViewById(R.id.main_input);
         String textToShow = main_input.getText().toString();
+
+        int duration = Toast.LENGTH_SHORT;
 
         if (TextUtils.isEmpty(textToShow)) {
             textToShow = String.valueOf(R.string.void_input);
